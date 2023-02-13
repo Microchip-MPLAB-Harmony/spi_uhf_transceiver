@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11" /><meta name="copyright" content="(C) Copyright 2023" />
+<meta name="DC.rights.owner" content="(C) Copyright 2023" />
+<meta name="DC.type" content="topic" />
+<meta name="DC.title" content="SPI UHF Transceiver Package" />
+<meta name="Description" content="This repository contains the MPLAB® Harmony 3 SPI UHF transceiver module. This module contains SPI command sets for UHF transceivers implemented on Microchip's 32-bit SAM C21 microcontrollers. Users can use these command sets for developing their own applications on Microchip's 32-bit SAM C21 series of microcontrollers using MPLAB Harmony 3." />
+<meta name="DC.relation" scheme="URI" content="GUID-27DBF02C-D3C3-4683-8AA6-154A911FAE0E.html" />
+<meta name="DC.format" content="XHTML" />
+<meta name="DC.identifier" content="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345" />
+<meta name="DC.language" content="en-US" />
+<link rel="stylesheet" type="text/css" href="stylesheets/atmel.css" />
+<title>SPI UHF Transceiver Package</title>
+<meta name="Microsoft.Help.Id" content="GUID-A30E9D13-084B-41DC-9552-9B68F3FB9283-GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345" />
+<meta name="Microsoft.Help.TocParent" content="GUID-A30E9D13-084B-41DC-9552-9B68F3FB9283" />
+<meta name="Microsoft.Help.TocOrder" content="0" />
+<meta name="Microsoft.Help.Locale" content="en-US" />
+<meta name="Microsoft.Help.TopicLocale" content="en-US" />
+<meta name="Microsoft.Help.DisplayVersion" content="MPLAB® Harmony SPI UHF Transceiver Package Reference A 02/2023" />
+<script language="javascript">
+       
+       if (window.parent.location.protocol != 'file:') {
+				document.addEventListener('click', function(e) {
+				    if (e.target) {
+               if (e.target.nodeName == "A" ) {
+                    if (!e.target.target) {
+                      e.preventDefault();
+                      e.stopPropagation();
+                              
+                      var origUrl = window.parent.location.href.substr(0, window.parent.location.href.indexOf("?"));
+                      if (origUrl.length === 0) {
+                          origUrl = window.parent.location.href;
+                      }
+                      var href= e.target.getAttribute("href");
+                      var parts = href.split("#");
+          
+                      var url = "";
+                      if (parts.length == 2 ) {
+                        if (!parts[0].length) {
+                            url = window.parent.location.search.replace('?','')
+                        } else {
+                            url = parts[0].replace('.html','');
+                        }
+                      } else {
+                        url = parts[0].replace('.html','');
+                      }
+
+                      if (parts.length == 2) {
+                          url += "#" + parts[1];
+                      }
+    
+                      window.parent.location.href = origUrl + "?" + url;
+
+                      return false;
+                    }
+               }
+            }
+				});
+			}
+
+		</script><script language="javascript">
+         
+         function copyContent(content, button) {
+         
+            var textArea = document.createElement("textarea");
+            
+            // Place in the top-left corner of screen regardless of scroll position.
+            textArea.style.position = 'fixed';
+            textArea.style.top = 0;
+            textArea.style.left = 0;
+            
+            // Ensure it has a small width and height. Setting to 1px / 1em
+            // doesn't work as this gives a negative w/h on some browsers.
+            textArea.style.width = '2em';
+            textArea.style.height = '2em';
+            
+            // We don't need padding, reducing the size if it does flash render.
+            textArea.style.padding = 0;
+            
+            // Clean up any borders.
+            textArea.style.border = 'none';
+            textArea.style.outline = 'none';
+            textArea.style.boxShadow = 'none';
+            
+            // Avoid flash of the white box if rendered for any reason.
+            textArea.style.background = 'transparent';
+            
+            textArea.value = content;
+            
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            
+            try {
+               var successful = document.execCommand('copy');
+               var msg = successful ? 'successful' : 'unsuccessful';
+               if (!button.classList.contains("copied")){
+                  button.textContent = "Copied";
+                  button.classList.add("copied");
+                  setTimeout(function(){
+                     button.textContent = "Copy";
+                     button.classList.remove("copied");
+                  },1000);
+               }
+            } catch (err) {
+               console.log('Oops, unable to copy');
+            }
+            
+            document.body.removeChild(textArea);
+         }
+         
+         function cpy(id, button) {
+            var element = document.getElementById(id);
+            var content = element.getAttribute("content");
+            
+            copyContent(content, button);
+         }
+         
+         document.addEventListener("DOMContentLoaded", function(event) {
+            document.querySelectorAll(".codeblock").forEach(function(elem) {
+               elem.style.position = "relative";
+               var copy = document.createElement("button");
+               copy.textContent = "Copy";
+               copy.setAttribute("class", "copy-code");
+               
+               var content = elem.textContent;
+               
+               copy.addEventListener("click", function(){
+                  copyContent(content, copy);
+               });
+               
+               elem.addEventListener("mouseenter", function(evt){
+                  elem.prepend(copy);
+               });
+            });
+            
+            document.querySelectorAll(".codeblock").forEach(function(elem) {
+               elem.addEventListener("mouseleave", function(evt){
+                  document.querySelector(".copy-code").remove();
+               });
+            });
+         });
+         
+      </script><script language="javascript">
+          
+          // Add the MathML namespace to html
+          var html = document.getElementsByTagName("html")[0],
+          head = document.getElementsByTagName("head")[0];
+          
+          var mathJax = document.createElement("script");
+          mathJax.src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML";
+          head.appendChild(mathJax);
+          
+          html.setAttribute("xmlns:m","http://www.w3.org/1998/Math/MathML");
+          
+          function inIframe() { try { return window.self !== window.top; } catch (e) { return true; } }
+          
+          if (!inIframe()) { 
+          
+          var Default = "index.html?GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345"; 
+          
+          var displaylocation = "value" + window.location.href;
+          
+          var GUIDS = displaylocation.split('GUID');          
+          
+          if (displaylocation.indexOf('#GUID') != -1) {            
+          var First = GUIDS[1].split('.html');  
+          if (GUIDS[3]){First = GUIDS[2].split('.html');}
+          if (GUIDS[4]){First = GUIDS[3].split('.html');}
+          if (GUIDS[5]){First = GUIDS[4].split('.html');}
+          
+          var Second = GUIDS[2].split('#');   
+          if (GUIDS[3]){Second = GUIDS[3].split('#');}
+          if (GUIDS[4]){Second = GUIDS[4].split('#');}
+          if (GUIDS[5]){Second = GUIDS[5].split('#');}
+          
+          Default = "index.html?" + "GUID" + First[0] + "GUID" + Second[0];     
+          }                    
+          window.top.location = Default;
+          }       
+          
+        </script><link rel="stylesheet" type="text/css" href="syntax-highlight.css" /><style xml:space="">
+        
+          button.copy-code{
+            display:none;
+            padding:0.7em 1.4em;
+            margin:0 0.3em 0.3em 0;
+            border-radius:0.15em;
+            box-sizing: border-box;
+            text-decoration:none;
+            font-family:'Roboto',sans-serif;
+            text-transform:uppercase;
+            font-weight:400;
+            color:#FFFFFF;
+            background-color:#9c9c9c;
+            box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+            text-align:center;
+            position:relative;
+            border: 0;
+            float: right;
+            border-radius: .5em;
+            cursor: pointer;
+          }
+          button.copy-code:active{
+            top:0.1em;
+          }
+          
+          pre:hover button.copy-code{
+            display: inline-block !important;
+          }
+          button.copy-code.copied {
+            cursor: default !important;
+          }
+          
+          
+          @media all and (max-width:30em){
+            button.copy-code{
+              display:block;
+              margin:0.4em auto;
+            }
+          }
+        
+        
+      </style><link rel="stylesheet" type="text/css" href="syntax-highlight.css" /></head>
+<body id="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345">
+
+<h1 class="title topictitle1" id="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345__GUID-1EB59572-07C2-4F95-8984-057EB932D9F8" style="">SPI UHF Transceiver Package</h1>
+
+<div class="body"><p class="shortdesc">This repository contains the MPLAB® Harmony 3 SPI UHF transceiver module. This module
+        contains SPI command sets for UHF transceivers implemented on Microchip's 32-bit SAM C21
+        microcontrollers. Users can use these command sets for developing their own applications on
+        Microchip's 32-bit SAM C21 series of microcontrollers using MPLAB Harmony 3.</p>
+
+        <p class="p"><strong class="ph b">Supported microcontroller</strong></p>
+
+        <ul class="ul" id="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345__UL_OSW_324_MWB">
+            <li class="li" id="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345__GUID-F4E1ECE2-CB9F-4D68-80E5-297426B31363">SAM C21</li>
+
+        </ul>
+
+        <div class="p">
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345__TABLE_QSZ_FMS_LWB" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Available UHF transceiver
+                    packages</span></caption>
+                    <col style="width:50%" />
+                    <col style="width:50%" />
+                    <thead class="thead" style="text-align:left;">
+                        <tr class="row">
+                            <th class="entry cellrowborder" style="vertical-align:middle;" id="d2579e46"><span>UHF transceiver package</span></th>
+
+                            <th class="entry cellrowborder" style="vertical-align:middle;" id="d2579e49"><span>Description</span></th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry cellrowborder" style="vertical-align:middle;" headers="d2579e46 "><span>ATA5831</span></td>
+
+                            <td class="entry cellrowborder" style="vertical-align:middle;" headers="d2579e49 "><span>Supports SPI command set for ATA5831 and derivatives:<p class="p">ATA5831,
+                                    ATA5832, ATA5833</p>
+<p class="p">ATA5781, ATA5782, ATA5783,
+                                    ATA5785</p>
+<p class="p">ATA8210, ATA8215</p>
+<p class="p">ATA8510,
+                                    ATA8515</p>
+<p class="p">ATA8710</p>
+</span></td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+</div>
+
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="GUID-27DBF02C-D3C3-4683-8AA6-154A911FAE0E.html">MPLAB Code Configurator (MCC)</a></strong><br />
+MCC Harmony 3 example configuration of the <span class="ph">SPI UHF Transceiver</span>.</li>
+</ul>
+</div></body>
+</html>
