@@ -14,7 +14,7 @@ MPLAB® Harmony 3 is an extension of the MPLAB® ecosystem for creating embedded
 This repository contains the MPLAB® Harmony 3 SPI UHF transceiver module. This module contains SPI command sets for UHF transceivers implemented on Microchip's 32-bit SAMC21 microcontrollers. Users can use these command sets for developing their own applications on Microchip's 32-bit SAMC21 series of microcontrollers using MPLAB Harmony 3. Refer to the following links for release notes and licensing information.
 
 - [Release Notes](./release_notes.md)
-- [MPLAB® Harmony License](mplab_harmony_license.md)
+- [MPLAB® Harmony License](Microchip_SLA001.md)
 <!---- [MPLAB® Harmony 3 SPI UHF transceiver Wiki](https://github.com/Microchip-MPLAB-Harmony/spi_uhf_transceiver/wiki)--->
 <!---- [MPLAB® Harmony 3 SPI UHF transceiver API Help](https://microchip-mplab-harmony.github.io/spi_uhf_transceiver)--->
 
@@ -31,7 +31,7 @@ This repository contains the MPLAB® Harmony 3 SPI UHF transceiver module. This 
 
 ____
 
-[![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/spi_uhf_transceiver/blob/master/mplab_harmony_license.md)
+[![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/spi_uhf_transceiver/blob/master/Microchip_SLA001.md)
 [![Latest release](https://img.shields.io/github/release/Microchip-MPLAB-Harmony/spi_uhf_transceiver.svg)](https://github.com/Microchip-MPLAB-Harmony/spi_uhf_transceiver/releases/latest)
 [![Latest release date](https://img.shields.io/github/release-date/Microchip-MPLAB-Harmony/spi_uhf_transceiver.svg)](https://github.com/Microchip-MPLAB-Harmony/spi_uhf_transceiver/releases/latest)
 [![Commit activity](https://img.shields.io/github/commit-activity/y/Microchip-MPLAB-Harmony/spi_uhf_transceiver.svg)](https://github.com/Microchip-MPLAB-Harmony/spi_uhf_transceiver/graphs/commit-activity)
