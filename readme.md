@@ -24,10 +24,8 @@ This repository contains the MPLAB® Harmony 3 SPI UHF transceiver module. This 
 | ---                           | ---                                                   |
 | ata5831                       | SPI command set for ATA5831 device                    |
 | config                        | SPI UHF transceiver module configuration file         |
+| docs                          | SPI UHF transceiver module help documentation         |
 | ../spi_uhf_transceiver_apps   | Example applications for SPI UHF transceiver module   |
-<!---
-| docs       | SPI UHF transceiver library help documentation                  |
---->
 
 ____
 
