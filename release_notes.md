@@ -15,7 +15,7 @@
 
 ### Dependencies
 
-* [MPLAB® X IDE v6.00](https://www.microchip.com/mplab/mplab-x-ide) or later
-* [MPLAB® XC32 C/C++ Compiler v4.10](https://www.microchip.com/mplab/compilers) or later
+* [MPLAB® X IDE v6.05](https://www.microchip.com/mplab/mplab-x-ide) or later
+* [MPLAB® XC32 C/C++ Compiler v4.20](https://www.microchip.com/mplab/compilers) or later
 * [csp v3.14.0](https://github.com/Microchip-MPLAB-Harmony/csp/tree/v3.14.0) or later
 * [core v3.11.1](https://github.com/Microchip-MPLAB-Harmony/core/tree/v3.11.1) or later
