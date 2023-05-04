@@ -1,292 +1,296 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html
-  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
-<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11" /><meta name="copyright" content="(C) Copyright 2023" />
-<meta name="DC.rights.owner" content="(C) Copyright 2023" />
-<meta name="DC.type" content="topic" />
-<meta name="DC.title" content="SPI UHF Transceiver Package" />
-<meta name="Description" content="This repository contains the MPLAB® Harmony 3 SPI UHF transceiver module. This module contains SPI command sets for UHF transceivers implemented on Microchip's 32-bit SAM C21 microcontrollers. Users can use these command sets for developing their own applications on Microchip's 32-bit SAM C21 series of microcontrollers using MPLAB Harmony 3." />
-<meta name="DC.relation" scheme="URI" content="GUID-27DBF02C-D3C3-4683-8AA6-154A911FAE0E.html" />
-<meta name="DC.format" content="XHTML" />
-<meta name="DC.identifier" content="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345" />
-<meta name="DC.language" content="en-US" />
-<link rel="stylesheet" type="text/css" href="stylesheets/atmel.css" />
-<title>SPI UHF Transceiver Package</title>
-<meta name="Microsoft.Help.Id" content="GUID-A30E9D13-084B-41DC-9552-9B68F3FB9283-GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345" />
-<meta name="Microsoft.Help.TocParent" content="GUID-A30E9D13-084B-41DC-9552-9B68F3FB9283" />
-<meta name="Microsoft.Help.TocOrder" content="0" />
-<meta name="Microsoft.Help.Locale" content="en-US" />
-<meta name="Microsoft.Help.TopicLocale" content="en-US" />
-<meta name="Microsoft.Help.DisplayVersion" content="MPLAB® Harmony SPI UHF Transceiver Package Reference A 02/2023" />
-<script language="javascript">
-       
-       if (window.parent.location.protocol != 'file:') {
-				document.addEventListener('click', function(e) {
-				    if (e.target) {
-               if (e.target.nodeName == "A" ) {
-                    if (!e.target.target) {
-                      e.preventDefault();
-                      e.stopPropagation();
-                              
-                      var origUrl = window.parent.location.href.substr(0, window.parent.location.href.indexOf("?"));
-                      if (origUrl.length === 0) {
-                          origUrl = window.parent.location.href;
-                      }
-                      var href= e.target.getAttribute("href");
-                      var parts = href.split("#");
-          
-                      var url = "";
-                      if (parts.length == 2 ) {
-                        if (!parts[0].length) {
-                            url = window.parent.location.search.replace('?','')
-                        } else {
-                            url = parts[0].replace('.html','');
-                        }
-                      } else {
-                        url = parts[0].replace('.html','');
-                      }
-
-                      if (parts.length == 2) {
-                          url += "#" + parts[1];
-                      }
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><meta name="description" content="This repository contains the MPLAB® Harmony 3 SPI UHF transceiver module. This module contains SPI command sets for UHF transceivers implemented on Microchip's 32-bit SAM C21 microcontrollers. Users can use these command sets for developing their own applications on Microchip's 32-bit SAM C21 series of microcontrollers using MPLAB Harmony 3."/>        
+      <title>1 SPI UHF Transceiver Package</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345-d425e11"/><meta name="wh-source-relpath" content="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345.xml"/><meta name="wh-out-relpath" content="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
     
-                      window.parent.location.href = origUrl + "?" + url;
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
 
-                      return false;
-                    }
-               }
-            }
-				});
-			}
-
-		</script><script language="javascript">
-         
-         function copyContent(content, button) {
-         
-            var textArea = document.createElement("textarea");
-            
-            // Place in the top-left corner of screen regardless of scroll position.
-            textArea.style.position = 'fixed';
-            textArea.style.top = 0;
-            textArea.style.left = 0;
-            
-            // Ensure it has a small width and height. Setting to 1px / 1em
-            // doesn't work as this gives a negative w/h on some browsers.
-            textArea.style.width = '2em';
-            textArea.style.height = '2em';
-            
-            // We don't need padding, reducing the size if it does flash render.
-            textArea.style.padding = 0;
-            
-            // Clean up any borders.
-            textArea.style.border = 'none';
-            textArea.style.outline = 'none';
-            textArea.style.boxShadow = 'none';
-            
-            // Avoid flash of the white box if rendered for any reason.
-            textArea.style.background = 'transparent';
-            
-            textArea.value = content;
-            
-            document.body.appendChild(textArea);
-            textArea.focus();
-            textArea.select();
-            
-            try {
-               var successful = document.execCommand('copy');
-               var msg = successful ? 'successful' : 'unsuccessful';
-               if (!button.classList.contains("copied")){
-                  button.textContent = "Copied";
-                  button.classList.add("copied");
-                  setTimeout(function(){
-                     button.textContent = "Copy";
-                     button.classList.remove("copied");
-                  },1000);
-               }
-            } catch (err) {
-               console.log('Oops, unable to copy');
-            }
-            
-            document.body.removeChild(textArea);
-         }
-         
-         function cpy(id, button) {
-            var element = document.getElementById(id);
-            var content = element.getAttribute("content");
-            
-            copyContent(content, button);
-         }
-         
-         document.addEventListener("DOMContentLoaded", function(event) {
-            document.querySelectorAll(".codeblock").forEach(function(elem) {
-               elem.style.position = "relative";
-               var copy = document.createElement("button");
-               copy.textContent = "Copy";
-               copy.setAttribute("class", "copy-code");
-               
-               var content = elem.textContent;
-               
-               copy.addEventListener("click", function(){
-                  copyContent(content, copy);
-               });
-               
-               elem.addEventListener("mouseenter", function(evt){
-                  elem.prepend(copy);
-               });
-            });
-            
-            document.querySelectorAll(".codeblock").forEach(function(elem) {
-               elem.addEventListener("mouseleave", function(evt){
-                  document.querySelector(".copy-code").remove();
-               });
-            });
-         });
-         
-      </script><script language="javascript">
-          
-          // Add the MathML namespace to html
-          var html = document.getElementsByTagName("html")[0],
-          head = document.getElementsByTagName("head")[0];
-          
-          var mathJax = document.createElement("script");
-          mathJax.src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML";
-          head.appendChild(mathJax);
-          
-          html.setAttribute("xmlns:m","http://www.w3.org/1998/Math/MathML");
-          
-          function inIframe() { try { return window.self !== window.top; } catch (e) { return true; } }
-          
-          if (!inIframe()) { 
-          
-          var Default = "index.html?GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345"; 
-          
-          var displaylocation = "value" + window.location.href;
-          
-          var GUIDS = displaylocation.split('GUID');          
-          
-          if (displaylocation.indexOf('#GUID') != -1) {            
-          var First = GUIDS[1].split('.html');  
-          if (GUIDS[3]){First = GUIDS[2].split('.html');}
-          if (GUIDS[4]){First = GUIDS[3].split('.html');}
-          if (GUIDS[5]){First = GUIDS[4].split('.html');}
-          
-          var Second = GUIDS[2].split('#');   
-          if (GUIDS[3]){Second = GUIDS[3].split('#');}
-          if (GUIDS[4]){Second = GUIDS[4].split('#');}
-          if (GUIDS[5]){Second = GUIDS[5].split('#');}
-          
-          Default = "index.html?" + "GUID" + First[0] + "GUID" + Second[0];     
-          }                    
-          window.top.location = Default;
-          }       
-          
-        </script><link rel="stylesheet" type="text/css" href="syntax-highlight.css" /><style xml:space="">
-        
-          button.copy-code{
-            display:none;
-            padding:0.7em 1.4em;
-            margin:0 0.3em 0.3em 0;
-            border-radius:0.15em;
-            box-sizing: border-box;
-            text-decoration:none;
-            font-family:'Roboto',sans-serif;
-            text-transform:uppercase;
-            font-weight:400;
-            color:#FFFFFF;
-            background-color:#9c9c9c;
-            box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
-            text-align:center;
-            position:relative;
-            border: 0;
-            float: right;
-            border-radius: .5em;
-            cursor: pointer;
-          }
-          button.copy-code:active{
-            top:0.1em;
-          }
-          
-          pre:hover button.copy-code{
-            display: inline-block !important;
-          }
-          button.copy-code.copied {
-            cursor: default !important;
-          }
-          
-          
-          @media all and (max-width:30em){
-            button.copy-code{
-              display:block;
-              margin:0.4em auto;
-            }
-          }
+    <body id="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
         
         
-      </style><link rel="stylesheet" type="text/css" href="syntax-highlight.css" /></head>
-<body id="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345">
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="MPLAB® Harmony SPI UHF Transceiver Package "/></a>
+                    <div class=" wh_publication_title "><a href="index.html">MPLAB® Harmony SPI UHF Transceiver Package </a></div>
+                    
+                </div>
+                
+                
+            </div>
 
-<h1 class="title topictitle1" id="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345__GUID-1EB59572-07C2-4F95-8984-057EB932D9F8" style="">SPI UHF Transceiver Package</h1>
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
 
-<div class="body"><p class="shortdesc">This repository contains the MPLAB® Harmony 3 SPI UHF transceiver module. This module
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li class="active"><div class="topicref" data-id="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345"><div class="title"><a href="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+SPI UHF Transceiver Package</a><div class="wh-tooltip"><p class="shortdesc">This repository contains the MPLAB® Harmony 3 SPI UHF transceiver module. This module         contains SPI command sets for UHF transceivers implemented on Microchip's 32-bit SAM C21         microcontrollers. Users can use these command sets for developing their own applications on         Microchip's 32-bit SAM C21 series of microcontrollers using MPLAB Harmony 3.</p></div></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="true" class="active"><div data-tocid="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345-d425e11" class="topicref" data-id="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345-d425e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345.html" id="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345-d425e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+SPI UHF Transceiver Package</a><div class="wh-tooltip"><p class="shortdesc">This repository contains the MPLAB® Harmony 3 SPI UHF transceiver module. This module         contains SPI command sets for UHF transceivers implemented on Microchip's 32-bit SAM C21         microcontrollers. Users can use these command sets for developing their own applications on         Microchip's 32-bit SAM C21 series of microcontrollers using MPLAB Harmony 3.</p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-27DBF02C-D3C3-4683-8AA6-154A911FAE0E-d425e22" class="topicref" data-id="GUID-27DBF02C-D3C3-4683-8AA6-154A911FAE0E" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-27DBF02C-D3C3-4683-8AA6-154A911FAE0E.html" id="GUID-27DBF02C-D3C3-4683-8AA6-154A911FAE0E-d425e22-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.1</ph>
+MPLAB Code Configurator (MCC)</a><div class="wh-tooltip"><p class="shortdesc">MCC Harmony 3 example configuration of the <span class="ph">SPI UHF Transceiver</span>.</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-155587DF-FB73-4F45-9095-9CEA2735C415-d425e36" class="topicref" data-id="GUID-155587DF-FB73-4F45-9095-9CEA2735C415" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-155587DF-FB73-4F45-9095-9CEA2735C415-d425e36-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-155587DF-FB73-4F45-9095-9CEA2735C415.html" id="GUID-155587DF-FB73-4F45-9095-9CEA2735C415-d425e36-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2</ph>
+SPI Command Reference</a></div></div></li></ul></li><li role="treeitem"><div data-tocid="GUID-83E28FC1-A47E-486B-B56E-28C05E2EC2E3-d425e278" class="topicref" data-id="GUID-83E28FC1-A47E-486B-B56E-28C05E2EC2E3" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-83E28FC1-A47E-486B-B56E-28C05E2EC2E3.html" id="GUID-83E28FC1-A47E-486B-B56E-28C05E2EC2E3-d425e278-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Release notes</a><div class="wh-tooltip"><p class="shortdesc">Microchip MPLAB® Harmony 3 Release Notes</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-AB407281-DB32-4529-8C4B-582E55956E14-d425e289" class="topicref" data-id="GUID-AB407281-DB32-4529-8C4B-582E55956E14" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-AB407281-DB32-4529-8C4B-582E55956E14-d425e289-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-AB407281-DB32-4529-8C4B-582E55956E14.html" id="GUID-AB407281-DB32-4529-8C4B-582E55956E14-d425e289-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Example applications</a><div class="wh-tooltip"><p class="shortdesc">The following applications are provided to demonstrate a typical usage of the <span class="ph">SPI UHF Transceiver</span>  package.</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d425e320" class="topicref backmatter backmatter_parent" data-id="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d425e320-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B.html" id="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d425e320-link">Microchip Information</a></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-9 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345__GUID-1EB59572-07C2-4F95-8984-057EB932D9F8">
+<h1 class="- topic/title title topictitle1" id="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345__GUID-1EB59572-07C2-4F95-8984-057EB932D9F8" style="">1 SPI UHF Transceiver Package</h1>
+
+<div class="- topic/body body"><p class="- topic/shortdesc shortdesc">This repository contains the MPLAB® Harmony 3 SPI UHF transceiver module. This module
         contains SPI command sets for UHF transceivers implemented on Microchip's 32-bit SAM C21
         microcontrollers. Users can use these command sets for developing their own applications on
         Microchip's 32-bit SAM C21 series of microcontrollers using MPLAB Harmony 3.</p>
-
-        <p class="p"><strong class="ph b">Supported microcontroller</strong></p>
-
-        <ul class="ul" id="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345__UL_OSW_324_MWB">
-            <li class="li" id="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345__GUID-F4E1ECE2-CB9F-4D68-80E5-297426B31363">SAM C21</li>
-
+        <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Supported microcontroller</strong></p>
+        <ul class="- topic/ul ul" id="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345__UL_OSW_324_MWB" data-ofbid="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345__UL_OSW_324_MWB">
+            <li class="- topic/li li" id="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345__GUID-F4E1ECE2-CB9F-4D68-80E5-297426B31363" data-ofbid="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345__GUID-F4E1ECE2-CB9F-4D68-80E5-297426B31363">SAM C21</li>
         </ul>
-
-        <div class="p">
-            
-<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345__TABLE_QSZ_FMS_LWB" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Available UHF transceiver
-                    packages</span></caption>
-                    <col style="width:50%" />
-                    <col style="width:50%" />
-                    <thead class="thead" style="text-align:left;">
-                        <tr class="row">
-                            <th class="entry cellrowborder" style="vertical-align:middle;" id="d2579e46"><span>UHF transceiver package</span></th>
-
-                            <th class="entry cellrowborder" style="vertical-align:middle;" id="d2579e49"><span>Description</span></th>
-
+        <div class="- topic/p p">
+            <div class="table-container"><table class="- topic/table table frame-all" id="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345__TABLE_QSZ_FMS_LWB" data-ofbid="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345__TABLE_QSZ_FMS_LWB" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 1-1. </span></span><span class="table--title" id="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345__GUID-CD9A0E16-492F-4731-892A-C76E990E2D2F">Available UHF transceiver
+                    packages</span></caption><colgroup><col style="width:50%"/><col style="width:50%"/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-1 rowsep-1" id="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345__TABLE_QSZ_FMS_LWB__entry__1">UHF transceiver package</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-1" id="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345__TABLE_QSZ_FMS_LWB__entry__2">Description</th>
                         </tr>
-
-                    </thead>
-
-                    <tbody class="tbody">
-                        <tr class="row">
-                            <td class="entry cellrowborder" style="vertical-align:middle;" headers="d2579e46 "><span>ATA5831</span></td>
-
-                            <td class="entry cellrowborder" style="vertical-align:middle;" headers="d2579e49 "><span>Supports SPI command set for ATA5831 and derivatives:<p class="p">ATA5831,
-                                    ATA5832, ATA5833</p>
-<p class="p">ATA5781, ATA5782, ATA5783,
-                                    ATA5785</p>
-<p class="p">ATA8210, ATA8215</p>
-<p class="p">ATA8510,
-                                    ATA8515</p>
-<p class="p">ATA8710</p>
-</span></td>
-
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-1 rowsep-0 valign-middle" headers="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345__TABLE_QSZ_FMS_LWB__entry__1">ATA8510</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345__TABLE_QSZ_FMS_LWB__entry__2">Package supports SPI command set for ATA8510 and all it`s
+                                derivatives listed below:<p class="- topic/p p">ATA5831, ATA5832, ATA5833</p><p class="- topic/p p">ATA5781,
+                                    ATA5782, ATA5783, ATA5785</p><p class="- topic/p p">ATA8210, ATA8215</p><p class="- topic/p p">ATA8510,
+                                    ATA8515</p><p class="- topic/p p">ATA8710</p></td>
                         </tr>
-
-                    </tbody>
-
-                </table>
-</div>
-
+                    </tbody></table></div>
         </div>
-
 </div>
-
-<div class="related-links">
-<ul class="ullinks">
-<li class="link ulchildlink"><strong><a href="GUID-27DBF02C-D3C3-4683-8AA6-154A911FAE0E.html">MPLAB Code Configurator (MCC)</a></strong><br />
-MCC Harmony 3 example configuration of the <span class="ph">SPI UHF Transceiver</span>.</li>
-</ul>
-</div></body>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
 </html>

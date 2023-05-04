@@ -1,0 +1,904 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="Description The SPI command “Set System Mode” is used to switch the following modes: IDLEMode IDLEMode(RC) IDLEMode(XTO) TXMode RXMode PollingMode Note: 1. The IDLEMode is the only mode that allows ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><title>1.2.13 Set System Mode</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A-d425e141"/><meta name="wh-source-relpath" content="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A.xml"/><meta name="wh-out-relpath" content="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="MPLAB® Harmony SPI UHF Transceiver Package "/></a>
+                    <div class=" wh_publication_title "><a href="index.html">MPLAB® Harmony SPI UHF Transceiver Package </a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref" data-id="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345"><div class="title"><a href="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+SPI UHF Transceiver Package</a><div class="wh-tooltip"><p class="shortdesc">This repository contains the MPLAB® Harmony 3 SPI UHF transceiver module. This module         contains SPI command sets for UHF transceivers implemented on Microchip's 32-bit SAM C21         microcontrollers. Users can use these command sets for developing their own applications on         Microchip's 32-bit SAM C21 series of microcontrollers using MPLAB Harmony 3.</p></div></div></div></li><li><div class="topicref" data-id="GUID-155587DF-FB73-4F45-9095-9CEA2735C415"><div class="title"><a href="GUID-155587DF-FB73-4F45-9095-9CEA2735C415.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2</ph>
+SPI Command Reference</a></div></div></li><li class="active"><div class="topicref" data-id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A"><div class="title"><a href="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2.13</ph>
+Set System Mode</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="true"><div data-tocid="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345-d425e11" class="topicref" data-id="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345-d425e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345.html" id="GUID-8D1E8D59-D08C-4C8C-BC93-74D94BB68345-d425e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+SPI UHF Transceiver Package</a><div class="wh-tooltip"><p class="shortdesc">This repository contains the MPLAB® Harmony 3 SPI UHF transceiver module. This module         contains SPI command sets for UHF transceivers implemented on Microchip's 32-bit SAM C21         microcontrollers. Users can use these command sets for developing their own applications on         Microchip's 32-bit SAM C21 series of microcontrollers using MPLAB Harmony 3.</p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-27DBF02C-D3C3-4683-8AA6-154A911FAE0E-d425e22" class="topicref" data-id="GUID-27DBF02C-D3C3-4683-8AA6-154A911FAE0E" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-27DBF02C-D3C3-4683-8AA6-154A911FAE0E.html" id="GUID-27DBF02C-D3C3-4683-8AA6-154A911FAE0E-d425e22-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.1</ph>
+MPLAB Code Configurator (MCC)</a><div class="wh-tooltip"><p class="shortdesc">MCC Harmony 3 example configuration of the <span class="ph">SPI UHF Transceiver</span>.</p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="GUID-155587DF-FB73-4F45-9095-9CEA2735C415-d425e36" class="topicref" data-id="GUID-155587DF-FB73-4F45-9095-9CEA2735C415" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-155587DF-FB73-4F45-9095-9CEA2735C415-d425e36-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-155587DF-FB73-4F45-9095-9CEA2735C415.html" id="GUID-155587DF-FB73-4F45-9095-9CEA2735C415-d425e36-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2</ph>
+SPI Command Reference</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-9122CF7D-6DBA-43E9-A3E5-FA4BC98AABE5-d425e44" class="topicref" data-id="GUID-9122CF7D-6DBA-43E9-A3E5-FA4BC98AABE5" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-9122CF7D-6DBA-43E9-A3E5-FA4BC98AABE5.html" id="GUID-9122CF7D-6DBA-43E9-A3E5-FA4BC98AABE5-d425e44-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2.1</ph>
+Read Fill Level RX FIFO</a></div></div></li><li role="treeitem"><div data-tocid="GUID-5798D71F-E9CB-4CBC-9169-8C63D743D368-d425e52" class="topicref" data-id="GUID-5798D71F-E9CB-4CBC-9169-8C63D743D368" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-5798D71F-E9CB-4CBC-9169-8C63D743D368.html" id="GUID-5798D71F-E9CB-4CBC-9169-8C63D743D368-d425e52-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2.2</ph>
+Read Fill Level TX FIFO</a></div></div></li><li role="treeitem"><div data-tocid="GUID-0C932117-F132-478B-9158-4392C1DF5805-d425e60" class="topicref" data-id="GUID-0C932117-F132-478B-9158-4392C1DF5805" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0C932117-F132-478B-9158-4392C1DF5805.html" id="GUID-0C932117-F132-478B-9158-4392C1DF5805-d425e60-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2.3</ph>
+Read Fill Level RSSI FIFO</a></div></div></li><li role="treeitem"><div data-tocid="GUID-836C3AA6-0D0A-4777-9D8B-622EAD1540B8-d425e68" class="topicref" data-id="GUID-836C3AA6-0D0A-4777-9D8B-622EAD1540B8" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-836C3AA6-0D0A-4777-9D8B-622EAD1540B8.html" id="GUID-836C3AA6-0D0A-4777-9D8B-622EAD1540B8-d425e68-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2.4</ph>
+Get Event Bytes</a></div></div></li><li role="treeitem"><div data-tocid="GUID-724973E8-B3E3-4065-8158-2D918151B05E-d425e76" class="topicref" data-id="GUID-724973E8-B3E3-4065-8158-2D918151B05E" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-724973E8-B3E3-4065-8158-2D918151B05E.html" id="GUID-724973E8-B3E3-4065-8158-2D918151B05E-d425e76-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2.5</ph>
+Read RSSI FIFO</a></div></div></li><li role="treeitem"><div data-tocid="GUID-C02B45B1-7F13-4F6D-BC82-A02B251D8545-d425e84" class="topicref" data-id="GUID-C02B45B1-7F13-4F6D-BC82-A02B251D8545" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-C02B45B1-7F13-4F6D-BC82-A02B251D8545.html" id="GUID-C02B45B1-7F13-4F6D-BC82-A02B251D8545-d425e84-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2.6</ph>
+Read RX FIFO</a></div></div></li><li role="treeitem"><div data-tocid="GUID-EFC6960E-6F62-4324-8EAD-D242B9341496-d425e92" class="topicref" data-id="GUID-EFC6960E-6F62-4324-8EAD-D242B9341496" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-EFC6960E-6F62-4324-8EAD-D242B9341496.html" id="GUID-EFC6960E-6F62-4324-8EAD-D242B9341496-d425e92-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2.7</ph>
+Write SRAM/Register</a></div></div></li><li role="treeitem"><div data-tocid="GUID-03DB0110-4304-44B8-ADD5-700BDA7FE0D4-d425e100" class="topicref" data-id="GUID-03DB0110-4304-44B8-ADD5-700BDA7FE0D4" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-03DB0110-4304-44B8-ADD5-700BDA7FE0D4.html" id="GUID-03DB0110-4304-44B8-ADD5-700BDA7FE0D4-d425e100-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2.8</ph>
+Read SRAM/Register</a></div></div></li><li role="treeitem"><div data-tocid="GUID-83E0BA72-A3A4-415C-8F71-02BC27D742C7-d425e108" class="topicref" data-id="GUID-83E0BA72-A3A4-415C-8F71-02BC27D742C7" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-83E0BA72-A3A4-415C-8F71-02BC27D742C7.html" id="GUID-83E0BA72-A3A4-415C-8F71-02BC27D742C7-d425e108-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2.9</ph>
+Write EEPROM</a></div></div></li><li role="treeitem"><div data-tocid="GUID-48149A3A-2AB4-44C3-B9FE-1688045CD53E-d425e116" class="topicref" data-id="GUID-48149A3A-2AB4-44C3-B9FE-1688045CD53E" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-48149A3A-2AB4-44C3-B9FE-1688045CD53E.html" id="GUID-48149A3A-2AB4-44C3-B9FE-1688045CD53E-d425e116-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2.10</ph>
+Read EEPROM</a></div></div></li><li role="treeitem"><div data-tocid="GUID-FA99A362-D134-4667-8F92-684948074FEF-d425e125" class="topicref" data-id="GUID-FA99A362-D134-4667-8F92-684948074FEF" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-FA99A362-D134-4667-8F92-684948074FEF.html" id="GUID-FA99A362-D134-4667-8F92-684948074FEF-d425e125-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2.11</ph>
+Write TX FIFO</a></div></div></li><li role="treeitem"><div data-tocid="GUID-1E0B2ACF-2D12-4ED3-8C7B-4052758D550E-d425e133" class="topicref" data-id="GUID-1E0B2ACF-2D12-4ED3-8C7B-4052758D550E" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-1E0B2ACF-2D12-4ED3-8C7B-4052758D550E.html" id="GUID-1E0B2ACF-2D12-4ED3-8C7B-4052758D550E-d425e133-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2.12</ph>
+Write TX Preamble FIFO</a></div></div></li><li role="treeitem" class="active"><div data-tocid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A-d425e141" class="topicref" data-id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A.html" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A-d425e141-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2.13</ph>
+Set System Mode</a></div></div></li><li role="treeitem"><div data-tocid="GUID-A011DF4F-7912-4101-A35F-73F5558AF1D3-d425e149" class="topicref" data-id="GUID-A011DF4F-7912-4101-A35F-73F5558AF1D3" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-A011DF4F-7912-4101-A35F-73F5558AF1D3.html" id="GUID-A011DF4F-7912-4101-A35F-73F5558AF1D3-d425e149-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2.14</ph>
+Calibrate and Check</a></div></div></li><li role="treeitem"><div data-tocid="GUID-FBC0FB2A-9C49-4CC3-B160-503B4EFA2FFA-d425e157" class="topicref" data-id="GUID-FBC0FB2A-9C49-4CC3-B160-503B4EFA2FFA" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-FBC0FB2A-9C49-4CC3-B160-503B4EFA2FFA.html" id="GUID-FBC0FB2A-9C49-4CC3-B160-503B4EFA2FFA-d425e157-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2.15</ph>
+Patch SPI</a></div></div></li><li role="treeitem"><div data-tocid="GUID-FD05ADB7-5406-4F22-A063-063D944AD168-d425e165" class="topicref" data-id="GUID-FD05ADB7-5406-4F22-A063-063D944AD168" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-FD05ADB7-5406-4F22-A063-063D944AD168.html" id="GUID-FD05ADB7-5406-4F22-A063-063D944AD168-d425e165-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2.16</ph>
+System Reset ROM</a></div></div></li><li role="treeitem"><div data-tocid="GUID-938AD584-B41B-40C9-B7BF-3D56C20C9FD7-d425e173" class="topicref" data-id="GUID-938AD584-B41B-40C9-B7BF-3D56C20C9FD7" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-938AD584-B41B-40C9-B7BF-3D56C20C9FD7.html" id="GUID-938AD584-B41B-40C9-B7BF-3D56C20C9FD7-d425e173-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2.17</ph>
+Get Version ROM</a></div></div></li><li role="treeitem"><div data-tocid="GUID-C1AF6B5B-D3F9-429C-95A6-081067B87AF8-d425e181" class="topicref" data-id="GUID-C1AF6B5B-D3F9-429C-95A6-081067B87AF8" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-C1AF6B5B-D3F9-429C-95A6-081067B87AF8.html" id="GUID-C1AF6B5B-D3F9-429C-95A6-081067B87AF8-d425e181-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2.18</ph>
+Get Version Flash</a></div></div></li><li role="treeitem"><div data-tocid="GUID-28465436-891E-4946-9A83-4EF94C41785E-d425e189" class="topicref" data-id="GUID-28465436-891E-4946-9A83-4EF94C41785E" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-28465436-891E-4946-9A83-4EF94C41785E.html" id="GUID-28465436-891E-4946-9A83-4EF94C41785E-d425e189-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2.19</ph>
+Customer Configurable Command</a></div></div></li><li role="treeitem"><div data-tocid="GUID-64C7E6CD-3D94-4C32-85FF-85DA48C707AF-d425e197" class="topicref" data-id="GUID-64C7E6CD-3D94-4C32-85FF-85DA48C707AF" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-64C7E6CD-3D94-4C32-85FF-85DA48C707AF.html" id="GUID-64C7E6CD-3D94-4C32-85FF-85DA48C707AF-d425e197-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2.20</ph>
+System Reset</a></div></div></li><li role="treeitem"><div data-tocid="GUID-F042EBCD-A8A2-4527-8E06-3A146FB0E1BD-d425e205" class="topicref" data-id="GUID-F042EBCD-A8A2-4527-8E06-3A146FB0E1BD" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-F042EBCD-A8A2-4527-8E06-3A146FB0E1BD.html" id="GUID-F042EBCD-A8A2-4527-8E06-3A146FB0E1BD-d425e205-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2.21</ph>
+Trigger EEPROM Secure Write</a></div></div></li><li role="treeitem"><div data-tocid="GUID-3D25493B-F99F-45B0-A412-A9D8BC1E6797-d425e214" class="topicref" data-id="GUID-3D25493B-F99F-45B0-A412-A9D8BC1E6797" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-3D25493B-F99F-45B0-A412-A9D8BC1E6797.html" id="GUID-3D25493B-F99F-45B0-A412-A9D8BC1E6797-d425e214-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2.22</ph>
+Set Voltage Monitor</a></div></div></li><li role="treeitem"><div data-tocid="GUID-052BDB5C-5F7C-4120-889D-951DA15FE94A-d425e222" class="topicref" data-id="GUID-052BDB5C-5F7C-4120-889D-951DA15FE94A" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-052BDB5C-5F7C-4120-889D-951DA15FE94A.html" id="GUID-052BDB5C-5F7C-4120-889D-951DA15FE94A-d425e222-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2.23</ph>
+OFF Command</a></div></div></li><li role="treeitem"><div data-tocid="GUID-78610F37-5703-4B19-911B-C726ECF121B2-d425e230" class="topicref" data-id="GUID-78610F37-5703-4B19-911B-C726ECF121B2" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-78610F37-5703-4B19-911B-C726ECF121B2.html" id="GUID-78610F37-5703-4B19-911B-C726ECF121B2-d425e230-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2.24</ph>
+Read Temperature Value</a></div></div></li><li role="treeitem"><div data-tocid="GUID-23B41713-D6E7-467E-BE4B-7C543B47165E-d425e238" class="topicref" data-id="GUID-23B41713-D6E7-467E-BE4B-7C543B47165E" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-23B41713-D6E7-467E-BE4B-7C543B47165E.html" id="GUID-23B41713-D6E7-467E-BE4B-7C543B47165E-d425e238-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2.25</ph>
+Init SRAM Service</a></div></div></li><li role="treeitem"><div data-tocid="GUID-9971B95C-8805-46C6-8AA4-75681C613E43-d425e246" class="topicref" data-id="GUID-9971B95C-8805-46C6-8AA4-75681C613E43" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-9971B95C-8805-46C6-8AA4-75681C613E43.html" id="GUID-9971B95C-8805-46C6-8AA4-75681C613E43-d425e246-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2.26</ph>
+Start RSSI Measurement</a></div></div></li><li role="treeitem"><div data-tocid="GUID-5FD79CD2-76F6-4D3B-9B64-8EC35ED22BA3-d425e254" class="topicref" data-id="GUID-5FD79CD2-76F6-4D3B-9B64-8EC35ED22BA3" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-5FD79CD2-76F6-4D3B-9B64-8EC35ED22BA3.html" id="GUID-5FD79CD2-76F6-4D3B-9B64-8EC35ED22BA3-d425e254-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2.27</ph>
+Get RSSI Value</a></div></div></li><li role="treeitem"><div data-tocid="GUID-2DDE89D3-A580-4E9B-AA17-B59DD50CBF77-d425e262" class="topicref" data-id="GUID-2DDE89D3-A580-4E9B-AA17-B59DD50CBF77" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-2DDE89D3-A580-4E9B-AA17-B59DD50CBF77.html" id="GUID-2DDE89D3-A580-4E9B-AA17-B59DD50CBF77-d425e262-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2.28</ph>
+Read RX FIFO Byte Interrupt</a></div></div></li><li role="treeitem"><div data-tocid="GUID-92DB5D19-8D2C-4FE0-939D-7AFB714728C1-d425e270" class="topicref" data-id="GUID-92DB5D19-8D2C-4FE0-939D-7AFB714728C1" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-92DB5D19-8D2C-4FE0-939D-7AFB714728C1.html" id="GUID-92DB5D19-8D2C-4FE0-939D-7AFB714728C1-d425e270-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2.29</ph>
+Read RSSI FIFO Byte Interrupt</a></div></div></li></ul></li></ul></li><li role="treeitem"><div data-tocid="GUID-83E28FC1-A47E-486B-B56E-28C05E2EC2E3-d425e278" class="topicref" data-id="GUID-83E28FC1-A47E-486B-B56E-28C05E2EC2E3" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-83E28FC1-A47E-486B-B56E-28C05E2EC2E3.html" id="GUID-83E28FC1-A47E-486B-B56E-28C05E2EC2E3-d425e278-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Release notes</a><div class="wh-tooltip"><p class="shortdesc">Microchip MPLAB® Harmony 3 Release Notes</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-AB407281-DB32-4529-8C4B-582E55956E14-d425e289" class="topicref" data-id="GUID-AB407281-DB32-4529-8C4B-582E55956E14" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-AB407281-DB32-4529-8C4B-582E55956E14-d425e289-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-AB407281-DB32-4529-8C4B-582E55956E14.html" id="GUID-AB407281-DB32-4529-8C4B-582E55956E14-d425e289-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Example applications</a><div class="wh-tooltip"><p class="shortdesc">The following applications are provided to demonstrate a typical usage of the <span class="ph">SPI UHF Transceiver</span>  package.</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d425e320" class="topicref backmatter backmatter_parent" data-id="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d425e320-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B.html" id="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d425e320-link">Microchip Information</a></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-9 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-03950FB6-DC60-493F-B55F-7A1B77BCA76B">
+  <h1 class="- topic/title title topictitle1" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-03950FB6-DC60-493F-B55F-7A1B77BCA76B" style="">1.2.13 Set System Mode</h1>
+  <div class="- topic/body body">
+    <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Description</strong></p>
+    <p class="- topic/p p">The SPI command “Set System Mode” is used to switch the following modes:</p>
+    <ol class="- topic/ol ol" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-3F961251-BBD6-412D-BAC1-78C4E5C803A8" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-3F961251-BBD6-412D-BAC1-78C4E5C803A8">
+      <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-CCAB97C0-800F-40EF-B315-C66865EDB8A6" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-CCAB97C0-800F-40EF-B315-C66865EDB8A6">IDLEMode<ol class="- topic/ol ol lower-alpha" type="a" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-D4C539D4-3FCB-49F7-B914-592A1ECAA541" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-D4C539D4-3FCB-49F7-B914-592A1ECAA541">
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-D9F1C88C-A804-4D17-ABCD-1DD6793B0C86" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-D9F1C88C-A804-4D17-ABCD-1DD6793B0C86">IDLEMode(RC)</li>
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-D2CB8748-D203-47BB-9A93-9E964C2D89CB" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-D2CB8748-D203-47BB-9A93-9E964C2D89CB">IDLEMode(XTO)</li>
+        </ol></li>
+      <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-B4BFE923-CBE9-492F-8942-64AA44CDD6B1" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-B4BFE923-CBE9-492F-8942-64AA44CDD6B1">TXMode</li>
+      <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-728F7A81-E0FC-4FC2-8BE3-4196B164CEC7" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-728F7A81-E0FC-4FC2-8BE3-4196B164CEC7">RXMode</li>
+      <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-B9B68390-2202-4E13-A980-E306D6DCDF01" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-B9B68390-2202-4E13-A980-E306D6DCDF01">PollingMode</li>
+    </ol>
+    <div class="- topic/note note notype note_notype" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-CBB4CB55-E5E0-44B5-BC96-E6554DC5D7A8" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-CBB4CB55-E5E0-44B5-BC96-E6554DC5D7A8"><span class="note__title">Note:</span> 
+      <p class="- topic/p p">1. The IDLEMode is the only mode that allows reading/writing from/to the SRAM and
+        registers. </p>
+      <p class="- topic/p p">The parameters are copied as follows:</p>
+      <p class="- topic/p p">extReq.systemModeConfig = systemModeConfig </p>
+      <p class="- topic/p p">extReq.serviceChannelConfig = serviceChannelConfig</p>
+    </div>
+    <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Command Frame</strong></p>
+    <div class="table-container"><table class="- topic/table table" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-4DB900AD-6310-4C68-93BA-7D82BE7E23BE" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-4DB900AD-6310-4C68-93BA-7D82BE7E23BE" data-cols="4"><caption></caption><colgroup><col style="width:24.817518248175187%"/><col style="width:26.03406326034064%"/><col style="width:24.817518248175187%"/><col style="width:24.330900243309006%"/></colgroup><tbody class="- topic/tbody tbody valign-top">
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-0 rowsep-0"><strong class="+ topic/ph hi-d/b ph b">Host</strong></td>
+            <td class="- topic/entry entry colsep-0 rowsep-0">
+              <p class="- topic/p p">0x0D</p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0">
+              <p class="- topic/p p">systemModeConfig</p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0">
+              <p class="- topic/p p">serviceChannelConfig</p>
+            </td>
+          </tr>
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-0 rowsep-0">
+              <strong class="+ topic/ph hi-d/b ph b"><span class="- topic/ph ph">ATA8510/15</span></strong></td>
+            <td class="- topic/entry entry colsep-0 rowsep-0">
+              <p class="- topic/p p">events.system</p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0">
+              <p class="- topic/p p">events.events</p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0">
+              <p class="- topic/p p">dummy</p>
+            </td>
+          </tr>
+        </tbody></table></div>
+    <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Parameters</strong></p>
+    <ul class="- topic/ul ul">
+      <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-48CACBFE-4A39-4390-82B7-00D420772E04" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-48CACBFE-4A39-4390-82B7-00D420772E04">0x0D – Command ID</li>
+      <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-90F82A2F-112B-4C3B-90D7-A1820EB907C9" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-90F82A2F-112B-4C3B-90D7-A1820EB907C9">systemModeConfig – Parameter for
+        extReq.systemModeConfig variable</li>
+    </ul>
+    <div class="table-container"><table class="- topic/table table widetable scale-70" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F8F0C25A-B15D-4491-9E1C-822CCBF5852C" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F8F0C25A-B15D-4491-9E1C-822CCBF5852C" data-cols="9"><caption></caption><colgroup><col/><col/><col/><col/><col/><col/><col/><col/><col/></colgroup><thead class="- topic/thead thead">
+          <tr class="- topic/row">
+            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F8F0C25A-B15D-4491-9E1C-822CCBF5852C__entry__1">
+              Name
+            </th>
+            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F8F0C25A-B15D-4491-9E1C-822CCBF5852C__entry__2">
+              Bit 7
+            </th>
+            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F8F0C25A-B15D-4491-9E1C-822CCBF5852C__entry__3">
+              Bit 6
+            </th>
+            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F8F0C25A-B15D-4491-9E1C-822CCBF5852C__entry__4">
+              Bit 5
+            </th>
+            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F8F0C25A-B15D-4491-9E1C-822CCBF5852C__entry__5">
+              Bit 4
+            </th>
+            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F8F0C25A-B15D-4491-9E1C-822CCBF5852C__entry__6">
+              Bit 3
+            </th>
+            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F8F0C25A-B15D-4491-9E1C-822CCBF5852C__entry__7">
+              Bit 2
+            </th>
+            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F8F0C25A-B15D-4491-9E1C-822CCBF5852C__entry__8">
+              Bit 1
+            </th>
+            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F8F0C25A-B15D-4491-9E1C-822CCBF5852C__entry__9">
+              Bit 0
+            </th>
+          </tr>
+        </thead><tbody class="- topic/tbody tbody valign-top">
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F8F0C25A-B15D-4491-9E1C-822CCBF5852C__entry__1">systemModeConfig </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F8F0C25A-B15D-4491-9E1C-822CCBF5852C__entry__2">
+              RF_CAL
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F8F0C25A-B15D-4491-9E1C-822CCBF5852C__entry__3">
+              ANT_TUNE
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F8F0C25A-B15D-4491-9E1C-822CCBF5852C__entry__4">
+              VCO_TUNE
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F8F0C25A-B15D-4491-9E1C-822CCBF5852C__entry__5">IDLEModeSelector </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F8F0C25A-B15D-4491-9E1C-822CCBF5852C__entry__6">—</td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F8F0C25A-B15D-4491-9E1C-822CCBF5852C__entry__7">
+              TMDEN
+            </td>
+            <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F8F0C25A-B15D-4491-9E1C-822CCBF5852C__entry__8 GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F8F0C25A-B15D-4491-9E1C-822CCBF5852C__entry__9" colspan="2"> OPM[1:0] </td>
+          </tr>
+        </tbody></table></div>
+        
+    <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Bit 7: RF_CAL – RF Calibration</strong></p>
+    <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">0</code> = RF Calibration before changing OPM disabled</p>
+    <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">1</code> = RF Calibration before changing OPM enabled</p>
+    <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Bit 6: ANT_TUNE – Antenna Tuning</strong></p>
+    <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">0</code> = Antenna tuning before changing OPM disabled</p>
+    <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">1</code> = Antenna tuning before changing OPM enabled</p>
+    <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Bit 5: VCO_TUNE – VCO Tuning</strong></p>
+    <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">0</code> = VCO tuning before changing OPM disabled</p>
+    <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">1</code> = VCO tuning before changing OPM enabled</p>
+    <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Bit 4: IDLEModeSelector – IDLEMode Selector</strong></p>
+    <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">0</code> = IDLEMode(RC) selected</p>
+    <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">1</code> = IDLEMode(XTO) selected</p>
+    <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Bit 3: </strong>Reserved Bit</p>
+    <p class="- topic/p p">This bit is reserved for future use and is set to ‘<code class="+ topic/ph pr-d/codeph ph codeph">0</code>’.</p>
+    <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Bit 2: TMDEN – Transparent Mode Data Enable</strong></p>
+    <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">0</code> = Buffered mode is enabled</p>
+    <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">1</code> = Transparent mode is enabled</p>
+    <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Bit 1..0: OPM[1:0] – Operation Mode</strong></p>
+    <div class="table-container"><table class="- topic/table table" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-C58E46A9-1F50-4D5C-9B6E-4E368B63F279" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-C58E46A9-1F50-4D5C-9B6E-4E368B63F279" data-cols="3"><caption></caption><colgroup><col style="width:24.242424242424242%"/><col style="width:24.242424242424242%"/><col style="width:51.515151515151516%"/></colgroup><thead class="- topic/thead thead">
+          <tr class="- topic/row">
+            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-C58E46A9-1F50-4D5C-9B6E-4E368B63F279__entry__1">
+              <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">OPM1</strong></p>
+            </th>
+            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-C58E46A9-1F50-4D5C-9B6E-4E368B63F279__entry__2">
+              <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">OPM0</strong></p>
+            </th>
+            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-C58E46A9-1F50-4D5C-9B6E-4E368B63F279__entry__3">
+              <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Function</strong></p>
+            </th>
+          </tr>
+        </thead><tbody class="- topic/tbody tbody valign-top">
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-C58E46A9-1F50-4D5C-9B6E-4E368B63F279__entry__1">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">0</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-C58E46A9-1F50-4D5C-9B6E-4E368B63F279__entry__2">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">0</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-C58E46A9-1F50-4D5C-9B6E-4E368B63F279__entry__3">
+              <p class="- topic/p p">IDLEMode</p>
+            </td>
+          </tr>
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-C58E46A9-1F50-4D5C-9B6E-4E368B63F279__entry__1">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">0</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-C58E46A9-1F50-4D5C-9B6E-4E368B63F279__entry__2">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">1</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-C58E46A9-1F50-4D5C-9B6E-4E368B63F279__entry__3">
+              <p class="- topic/p p">TXMode</p>
+            </td>
+          </tr>
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-C58E46A9-1F50-4D5C-9B6E-4E368B63F279__entry__1">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">1</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-C58E46A9-1F50-4D5C-9B6E-4E368B63F279__entry__2">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">0</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-C58E46A9-1F50-4D5C-9B6E-4E368B63F279__entry__3">
+              <p class="- topic/p p">RXMode</p>
+            </td>
+          </tr>
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-C58E46A9-1F50-4D5C-9B6E-4E368B63F279__entry__1">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">1</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-C58E46A9-1F50-4D5C-9B6E-4E368B63F279__entry__2">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">1</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-C58E46A9-1F50-4D5C-9B6E-4E368B63F279__entry__3">
+              <p class="- topic/p p">RX PollingMode</p>
+            </td>
+          </tr>
+        </tbody></table></div>
+    <ul class="- topic/ul ul">
+      <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-C68A4AE7-C501-45CD-B861-349D04C2564E" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-C68A4AE7-C501-45CD-B861-349D04C2564E">serviceChannelConfig – Parameter for
+        extReq.serviceChannelConfig variable (all modes except PollingMode)</li>
+    </ul>
+    <div class="table-container"><table class="- topic/table table widetable scale-70" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F5DAD2E8-C9DA-4C8F-BAA8-FD02BE0076FA" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F5DAD2E8-C9DA-4C8F-BAA8-FD02BE0076FA" data-cols="9"><caption></caption><colgroup><col style="width:20%"/><col style="width:10%"/><col style="width:10%"/><col style="width:10%"/><col style="width:10%"/><col style="width:10%"/><col style="width:10%"/><col style="width:10%"/><col style="width:10%"/></colgroup><thead class="- topic/thead thead">
+          <tr class="- topic/row">
+            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F5DAD2E8-C9DA-4C8F-BAA8-FD02BE0076FA__entry__1">
+              <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Name</strong></p>
+            </th>
+            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F5DAD2E8-C9DA-4C8F-BAA8-FD02BE0076FA__entry__2">
+              <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Bit 7</strong></p>
+            </th>
+            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F5DAD2E8-C9DA-4C8F-BAA8-FD02BE0076FA__entry__3">
+              <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Bit 6</strong></p>
+            </th>
+            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F5DAD2E8-C9DA-4C8F-BAA8-FD02BE0076FA__entry__4">
+              <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Bit 5</strong></p>
+            </th>
+            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F5DAD2E8-C9DA-4C8F-BAA8-FD02BE0076FA__entry__5">
+              <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Bit 4</strong></p>
+            </th>
+            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F5DAD2E8-C9DA-4C8F-BAA8-FD02BE0076FA__entry__6">
+              <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Bit 3</strong></p>
+            </th>
+            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F5DAD2E8-C9DA-4C8F-BAA8-FD02BE0076FA__entry__7">
+              <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Bit 2</strong></p>
+            </th>
+            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F5DAD2E8-C9DA-4C8F-BAA8-FD02BE0076FA__entry__8">
+              <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Bit 1</strong></p>
+            </th>
+            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F5DAD2E8-C9DA-4C8F-BAA8-FD02BE0076FA__entry__9">
+              <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Bit 0</strong></p>
+            </th>
+          </tr>
+        </thead><tbody class="- topic/tbody tbody valign-top">
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F5DAD2E8-C9DA-4C8F-BAA8-FD02BE0076FA__entry__1">
+              <p class="- topic/p p">serviceChannelConfig</p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F5DAD2E8-C9DA-4C8F-BAA8-FD02BE0076FA__entry__2">
+              <p class="- topic/p p">enaPathB</p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F5DAD2E8-C9DA-4C8F-BAA8-FD02BE0076FA__entry__3">
+              <p class="- topic/p p">enaPathA</p>
+            </td>
+            <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F5DAD2E8-C9DA-4C8F-BAA8-FD02BE0076FA__entry__4 GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F5DAD2E8-C9DA-4C8F-BAA8-FD02BE0076FA__entry__5" colspan="2">
+              <p class="- topic/p p">ch[1:0]</p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F5DAD2E8-C9DA-4C8F-BAA8-FD02BE0076FA__entry__6">—</td>
+            <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F5DAD2E8-C9DA-4C8F-BAA8-FD02BE0076FA__entry__7 GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F5DAD2E8-C9DA-4C8F-BAA8-FD02BE0076FA__entry__8 GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F5DAD2E8-C9DA-4C8F-BAA8-FD02BE0076FA__entry__9" colspan="3">
+              <p class="- topic/p p">ser[2:0]</p>
+            </td>
+          </tr>
+        </tbody></table></div>
+    <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Bit 7: enaPathB – Enable Path B</strong></p>
+    <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">0</code> = Path B disabled</p>
+    <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">1</code> = Path B enabled</p>
+    <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Bit 6: enaPathA – Enable Path A</strong></p>
+    <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">0</code> = Path A disabled</p>
+    <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">1</code> = Path A enabled</p>
+    <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Bits 5..4: ch[1:0] – Channel</strong></p>
+    <div class="table-container"><table class="- topic/table table" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-AD2E45AD-AB26-4DE9-8414-1F223A81F198" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-AD2E45AD-AB26-4DE9-8414-1F223A81F198" data-cols="3"><caption></caption><colgroup><col style="width:25.252525252525253%"/><col style="width:25.252525252525253%"/><col style="width:49.494949494949495%"/></colgroup><thead class="- topic/thead thead">
+          <tr class="- topic/row">
+            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-AD2E45AD-AB26-4DE9-8414-1F223A81F198__entry__1">
+              <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">ch1</strong></p>
+            </th>
+            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-AD2E45AD-AB26-4DE9-8414-1F223A81F198__entry__2">
+              <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">ch0</strong></p>
+            </th>
+            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-AD2E45AD-AB26-4DE9-8414-1F223A81F198__entry__3">
+              <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Function</strong></p>
+            </th>
+          </tr>
+        </thead><tbody class="- topic/tbody tbody valign-top">
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-AD2E45AD-AB26-4DE9-8414-1F223A81F198__entry__1">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">0</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-AD2E45AD-AB26-4DE9-8414-1F223A81F198__entry__2">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">0</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-AD2E45AD-AB26-4DE9-8414-1F223A81F198__entry__3">
+              <p class="- topic/p p">Channel 0</p>
+            </td>
+          </tr>
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-AD2E45AD-AB26-4DE9-8414-1F223A81F198__entry__1">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">0</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-AD2E45AD-AB26-4DE9-8414-1F223A81F198__entry__2">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">1</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-AD2E45AD-AB26-4DE9-8414-1F223A81F198__entry__3">
+              <p class="- topic/p p">Channel 1</p>
+            </td>
+          </tr>
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-AD2E45AD-AB26-4DE9-8414-1F223A81F198__entry__1">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">1</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-AD2E45AD-AB26-4DE9-8414-1F223A81F198__entry__2">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">0</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-AD2E45AD-AB26-4DE9-8414-1F223A81F198__entry__3">
+              <p class="- topic/p p">Channel 2</p>
+            </td>
+          </tr>
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-AD2E45AD-AB26-4DE9-8414-1F223A81F198__entry__1">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">1</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-AD2E45AD-AB26-4DE9-8414-1F223A81F198__entry__2">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">1</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-AD2E45AD-AB26-4DE9-8414-1F223A81F198__entry__3">
+              <p class="- topic/p p">Channel 0 – default</p>
+            </td>
+          </tr>
+        </tbody></table></div>
+    <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Bit 3: </strong>Reserved Bit</p>
+    <p class="- topic/p p">This bit is reserved for future use and is set to ‘<code class="+ topic/ph pr-d/codeph ph codeph">0</code>’.</p>
+    <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Bits 2..0: ser[2:0] – Service[2:0]</strong></p>
+    <div class="table-container"><table class="- topic/table table" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A" data-cols="4"><caption></caption><colgroup><col style="width:17%"/><col style="width:17%"/><col style="width:17%"/><col style="width:49%"/></colgroup><thead class="- topic/thead thead">
+          <tr class="- topic/row">
+            <th class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__1">
+              <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Ser2</strong></p>
+            </th>
+            <th class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__2">
+              <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Ser1</strong></p>
+            </th>
+            <th class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__3">
+              <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Ser0</strong></p>
+            </th>
+            <th class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__4">
+              <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Function</strong></p>
+            </th>
+          </tr>
+        </thead><tbody class="- topic/tbody tbody valign-top">
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__1">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">0</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__2">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">0</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__3">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">0</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__4">
+              <p class="- topic/p p">Service0</p>
+            </td>
+          </tr>
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__1">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">0</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__2">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">0</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__3">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">1</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__4">
+              <p class="- topic/p p">Service1</p>
+            </td>
+          </tr>
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__1">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">0</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__2">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">1</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__3">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">0</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__4">
+              <p class="- topic/p p">Service2</p>
+            </td>
+          </tr>
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__1">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">0</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__2">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">1</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__3">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">1</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__4">
+              <p class="- topic/p p">Service3</p>
+            </td>
+          </tr>
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__1">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">1</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__2">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">0</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__3">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">0</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__4">
+              <p class="- topic/p p">Service4</p>
+            </td>
+          </tr>
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__1">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">1</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__2">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">0</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__3">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">1</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__4">
+              <p class="- topic/p p">Reserved</p>
+            </td>
+          </tr>
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__1">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">1</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__2">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">1</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__3">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">0</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__4">
+              <p class="- topic/p p">Reserved</p>
+            </td>
+          </tr>
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__1">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">1</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__2">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">1</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__3">
+              <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">1</code></p>
+            </td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-248ACDE3-E944-4F14-B271-B5F34163553A__entry__4">
+              <p class="- topic/p p">Reserved</p>
+            </td>
+          </tr>
+        </tbody></table></div>
+    <p class="- topic/p p">serviceChannelConfig – Parameter for extReq.serviceChannelConfig variable (PollingMode
+      only)</p>
+    <div class="- topic/p p"><div class="table-container"><table class="- topic/table table widetable scale-70" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__TABLE_MPQ_ZF5_TNB" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__TABLE_MPQ_ZF5_TNB" data-cols="9"><caption></caption><colgroup><col style="width:20.792079207920793%"/><col style="width:9.900990099009901%"/><col style="width:9.900990099009901%"/><col style="width:9.900990099009901%"/><col style="width:9.900990099009901%"/><col style="width:9.900990099009901%"/><col style="width:9.900990099009901%"/><col style="width:9.900990099009901%"/><col style="width:9.900990099009901%"/></colgroup><thead class="- topic/thead thead">
+            <tr class="- topic/row">
+              <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__TABLE_MPQ_ZF5_TNB__entry__1">
+                <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Name</strong></p>
+              </th>
+              <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__TABLE_MPQ_ZF5_TNB__entry__2">
+                <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Bit 7</strong></p>
+              </th>
+              <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__TABLE_MPQ_ZF5_TNB__entry__3">
+                <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Bit 6</strong></p>
+              </th>
+              <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__TABLE_MPQ_ZF5_TNB__entry__4">
+                <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Bit 5</strong></p>
+              </th>
+              <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__TABLE_MPQ_ZF5_TNB__entry__5">
+                <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Bit 4</strong></p>
+              </th>
+              <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__TABLE_MPQ_ZF5_TNB__entry__6">
+                <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Bit 3</strong></p>
+              </th>
+              <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__TABLE_MPQ_ZF5_TNB__entry__7">
+                <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Bit 2</strong></p>
+              </th>
+              <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__TABLE_MPQ_ZF5_TNB__entry__8">
+                <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Bit 1</strong></p>
+              </th>
+              <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__TABLE_MPQ_ZF5_TNB__entry__9">
+                <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Bit 0</strong></p>
+              </th>
+            </tr>
+          </thead><tbody class="- topic/tbody tbody valign-top">
+            <tr class="- topic/row">
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__TABLE_MPQ_ZF5_TNB__entry__1">
+                <p class="- topic/p p">serviceChannelConfig</p>
+              </td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__TABLE_MPQ_ZF5_TNB__entry__2">—</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__TABLE_MPQ_ZF5_TNB__entry__3">—</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__TABLE_MPQ_ZF5_TNB__entry__4">—</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__TABLE_MPQ_ZF5_TNB__entry__5">—</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__TABLE_MPQ_ZF5_TNB__entry__6 GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__TABLE_MPQ_ZF5_TNB__entry__7 GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__TABLE_MPQ_ZF5_TNB__entry__8 GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__TABLE_MPQ_ZF5_TNB__entry__9" colspan="4">
+                <p class="- topic/p p">startPollingIndex</p>
+              </td>
+            </tr>
+          </tbody></table></div><strong class="+ topic/ph hi-d/b ph b">Bits 7..4: </strong>Reserved Bits</div>
+    <p class="- topic/p p">These bits are reserved for future use and are set to ‘<code class="+ topic/ph pr-d/codeph ph codeph">0</code>’.</p>
+    <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Bits 3..0: startPollingIndex – Start Index in PollingMode </strong></p>
+    <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Return Values</strong></p>
+    <ul class="- topic/ul ul">
+      <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-54CDD649-C179-4428-A632-DB5C9AD6A172" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-54CDD649-C179-4428-A632-DB5C9AD6A172">events.system – Event byte (for details see
+        SPI command “Get Event Bytes”)</li>
+      <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-9775BD37-C793-4299-8504-30A2D6BA552F" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-9775BD37-C793-4299-8504-30A2D6BA552F">events.events – Event byte (for details see
+        SPI command “Get Event Bytes”)</li>
+      <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-D1DF8D1E-50D5-493F-8F7F-925522ED6D29" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-D1DF8D1E-50D5-493F-8F7F-925522ED6D29">0x00 – Dummy byte (no information)</li>
+    </ul>
+    <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Set System Mode (IDLEMode)</strong></p>
+    <p class="- topic/p p">If Operation Mode OPM IDLEMode is selected, the firmware switches from any mode to IDLEMode.
+      This command is accepted always to set the system to a defined mode.</p>
+    <p class="- topic/p p">The following parameters are <strong class="+ topic/ph hi-d/b ph b">used</strong>:</p>
+    <ul class="- topic/ul ul">
+      <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-EBA6BAC8-2DF0-4CA6-BA24-20E776220470" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-EBA6BAC8-2DF0-4CA6-BA24-20E776220470">systemModeConfig<ul class="- topic/ul ul">
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-2DBE02EA-7C53-47B3-AD9B-782F81E89ADF" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-2DBE02EA-7C53-47B3-AD9B-782F81E89ADF">IDLEModeSelector:<ul class="- topic/ul ul">
+              <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-43BBBCDE-F0DC-4209-8368-56CD7F63110F" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-43BBBCDE-F0DC-4209-8368-56CD7F63110F">0 switch to IDLEMode(RC)</li>
+              <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-89D476F6-FAD9-4341-9F26-19A8E296A907" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-89D476F6-FAD9-4341-9F26-19A8E296A907">1 switch to IDLEMode(XTO)</li>
+            </ul></li>
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-7D5B3A8A-5735-4EED-A39A-21B26C7A3E7D" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-7D5B3A8A-5735-4EED-A39A-21B26C7A3E7D">OPM Operation Mode (set to 00)</li>
+        </ul></li>
+      <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-A8962C8C-C27D-42BC-A475-AEF83C7D46D7" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-A8962C8C-C27D-42BC-A475-AEF83C7D46D7">OPM serviceChannelConfig<ul class="- topic/ul ul">
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-3A4D2331-AC07-4CE0-B4DE-FD2255C773CE" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-3A4D2331-AC07-4CE0-B4DE-FD2255C773CE">none</li>
+        </ul></li>
+    </ul>
+    <p class="- topic/p p">The following parameters are <strong class="+ topic/ph hi-d/b ph b">ignored</strong>:</p>
+    <ul class="- topic/ul ul">
+      <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-E27B2FE9-0D8E-4289-BE13-A57240E86D87" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-E27B2FE9-0D8E-4289-BE13-A57240E86D87">systemModeConfig<ul class="- topic/ul ul">
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-5D8B6525-888C-475D-9AA1-6F5616414019" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-5D8B6525-888C-475D-9AA1-6F5616414019">RF_CAL</li>
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-516682D8-88F5-424B-9E8B-BD5F1CC40867" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-516682D8-88F5-424B-9E8B-BD5F1CC40867">ANT_TUNE</li>
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-BF217DF2-5180-4477-B7D1-52E29F7D1C68" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-BF217DF2-5180-4477-B7D1-52E29F7D1C68">VCO_TUNE</li>
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F7246629-EC88-4C3A-BA30-30585D0A94C3" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F7246629-EC88-4C3A-BA30-30585D0A94C3">TMDEN</li>
+        </ul></li>
+      <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-DE89CF3A-45AC-4734-A8F6-E023B409BC1C" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-DE89CF3A-45AC-4734-A8F6-E023B409BC1C">serviceChannelConfig<ul class="- topic/ul ul">
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-924F7725-F61F-4588-9C8E-029F7D5180FF" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-924F7725-F61F-4588-9C8E-029F7D5180FF">enaPathB</li>
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-7A34DDF3-52B3-40EA-BAFD-85CA68B88C53" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-7A34DDF3-52B3-40EA-BAFD-85CA68B88C53">enaPathA</li>
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-FEC63111-6673-4586-AB18-110DC4CF4268" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-FEC63111-6673-4586-AB18-110DC4CF4268">ch[1:0]</li>
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-49840E8F-330B-4C72-969D-391C37896FB7" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-49840E8F-330B-4C72-969D-391C37896FB7">ser[2:0]</li>
+        </ul></li>
+    </ul>
+    <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Set System Mode (TXMode)</strong></p>
+    <p class="- topic/p p">If the operation mode OPM TXMode is selected, the firmware switches from IDLEMode, TXMode or
+      RXMode to TXMode. The firmware decides if normal switching or direct switching is used. After
+      the system is ready for transmitting, the CMD_RDY flag in event byte system is set.</p>
+    <p class="- topic/p p">The following parameters are used:</p>
+    <ul class="- topic/ul ul">
+      <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-44421345-C00D-426B-8ED4-684C49752B99" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-44421345-C00D-426B-8ED4-684C49752B99">systemModeConfig<ul class="- topic/ul ul">
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-A43E1E68-D459-4D2C-AE28-72F1FAC9186F" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-A43E1E68-D459-4D2C-AE28-72F1FAC9186F">RF_CAL: if set, the firmware does a correction of the frequency words according to the
+            last measured temperature.</li>
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-5B984C5D-0B76-4516-A6FD-2169BD1D919E" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-5B984C5D-0B76-4516-A6FD-2169BD1D919E">ANT_TUNE: if set, the firmware
+            configures the TX flow with antenna tuning SSM.</li>
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-5FF08E6B-D1E0-44A9-9598-E996B9DF29CD" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-5FF08E6B-D1E0-44A9-9598-E996B9DF29CD">VCO_TUNE: if set, the firmware
+            configures the TX flow with VCO tuning SSM.</li>
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-832CCF20-CB02-4FA7-BCD2-D9BCB0A2CBB0" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-832CCF20-CB02-4FA7-BCD2-D9BCB0A2CBB0">IDLEModeSelector: if set, the system returns to IDLEMode(XTO) after TXMode has
+            finished. If cleared, the system returns to IDLEMode(RC).</li>
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-747497B8-EFA0-438C-8AF9-A8D8F598B0B3" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-747497B8-EFA0-438C-8AF9-A8D8F598B0B3">TMDEN Transparent Data Mode Enable: if set, the system is configured for
+            TXMode(transparent). If cleared, the system is configured for TXMode(buffered).</li>
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-B2366386-AB01-4679-9C98-DFE0C4154B60" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-B2366386-AB01-4679-9C98-DFE0C4154B60">OPM Operation Mode (set to 0b01).</li>
+        </ul></li>
+      <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-83EF6D4D-E522-4911-91A5-E284DCA81965" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-83EF6D4D-E522-4911-91A5-E284DCA81965">serviceChannelConfig<ul class="- topic/ul ul">
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-0A68D1F7-B3DF-473C-8A68-696B12B844CF" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-0A68D1F7-B3DF-473C-8A68-696B12B844CF">enaPathB: If set, path B configuration is used for TXMode, enaPathA must be cleared in
+            this case.</li>
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-8E825B20-9064-4D4B-BC1E-5708B67C1ED4" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-8E825B20-9064-4D4B-BC1E-5708B67C1ED4">enaPathA: If set, path A configuration is used for TXMode, enaPathB must be cleared in
+            this case.</li>
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F1590AF9-05AE-4AD5-9C68-D2A9209B4AE2" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-F1590AF9-05AE-4AD5-9C68-D2A9209B4AE2">ch[1:0]: defines the used channel configuration for TXMode.</li>
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-DE537B11-6E41-40F9-BB4A-34FA186B76B9" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-DE537B11-6E41-40F9-BB4A-34FA186B76B9">ser[2:0]: defines the used service configuration for TXMode.</li>
+        </ul></li>
+    </ul>
+    <p class="- topic/p p">The following parameters are <strong class="+ topic/ph hi-d/b ph b">ignored</strong>:</p>
+    <ul class="- topic/ul ul">
+      <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-FF072FEF-1846-43FD-B516-5DC11DFE8774" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-FF072FEF-1846-43FD-B516-5DC11DFE8774">none</li>
+    </ul>
+    <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Set System Mode (RXMode)</strong></p>
+    <p class="- topic/p p">If the operation mode OPM RXMode is selected, the firmware switches from IDLEMode, TXMode or
+      RXMode to RXMode. The firmware decides if normal switching or direct switching is used.</p>
+    <p class="- topic/p p">The following parameters are <strong class="+ topic/ph hi-d/b ph b">used</strong>:</p>
+    <ul class="- topic/ul ul">
+      <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-1C047017-7EAD-4211-B593-FC3215FF5179" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-1C047017-7EAD-4211-B593-FC3215FF5179">systemModeConfig<ul class="- topic/ul ul">
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-0FDA157C-2751-4A51-ABBF-81DB12785E16" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-0FDA157C-2751-4A51-ABBF-81DB12785E16">RF_CAL: if set, the firmware does a correction of the frequency words according to the
+            last measured temperature.</li>
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-77521FFC-A2A0-4690-8468-E3D91A1FF44A" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-77521FFC-A2A0-4690-8468-E3D91A1FF44A">VCO_TUNE: if set, the firmware configures the Rx flow with VCO tuning SSM.</li>
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-C1B01B87-1714-4763-9F89-8EE9D0408D5A" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-C1B01B87-1714-4763-9F89-8EE9D0408D5A">IDLEModeSelector: if set, the system returns to IDLEMode(XTO) after RXMode has
+            finished. If cleared, the system returns to IDLEMode(RC).</li>
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-6DB83AA2-AD5C-4A36-B499-4AF55815C324" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-6DB83AA2-AD5C-4A36-B499-4AF55815C324">TMDEN Transparent Data Mode Enable: if set, the system is configured for
+            RXMode(transparent). If cleared, the system is configured for RXMode(buffered).</li>
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-591604C1-19E2-435C-AEEF-C97B4764F564" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-591604C1-19E2-435C-AEEF-C97B4764F564">OPM Operation Mode (set to 0b10).</li>
+        </ul></li>
+      <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-5D9089DE-9763-4F2E-8EAB-536A9E914F61" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-5D9089DE-9763-4F2E-8EAB-536A9E914F61">serviceChannelConfig<ul class="- topic/ul ul">
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-DA11B758-6062-4EE7-B845-1D7FDFA7343C" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-DA11B758-6062-4EE7-B845-1D7FDFA7343C">enaPathB: If set, path B configuration is used for RXMode.</li>
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-14C3DCD3-9782-43D2-AE92-D03EDA202C6C" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-14C3DCD3-9782-43D2-AE92-D03EDA202C6C">enaPathA: If set, path A configuration is used for RXMode.</li>
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-562706B8-F50C-435B-B979-E7C3B89E56FC" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-562706B8-F50C-435B-B979-E7C3B89E56FC">ch[1:0]: defines the used channel configuration for RXMode.</li>
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-91601E38-BB62-4D98-9DDF-0126EB47D4C8" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-91601E38-BB62-4D98-9DDF-0126EB47D4C8">ser[2:0]: defines the used service configuration for RXMode.</li>
+        </ul></li>
+    </ul>
+    <p class="- topic/p p">The following parameters are <strong class="+ topic/ph hi-d/b ph b">ignored</strong>:</p>
+    <ul class="- topic/ul ul">
+      <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-966833AA-7D78-41C0-8873-28481F4149D6" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-966833AA-7D78-41C0-8873-28481F4149D6">Antenna tuning: not part of RXMode</li>
+    </ul>
+    <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Set System Mode (PollingMode)</strong></p>
+    <p class="- topic/p p">If the operation mode OPM PollingMode is selected, the firmware switches from IDLEMode to
+      PollingMode. After the SPI command is accepted the firmware configures the SSM with VCO tuning
+      (if enabled in systemModeConfig) for the 1<sup class="+ topic/ph hi-d/sup ph sup">st</sup> service/channel configuration. The
+      following service/channel configurations are configured according to their configuration in
+      the SRAM array pollConfig.pollChanConf.</p>
+    <p class="- topic/p p">The following parameters are <strong class="+ topic/ph hi-d/b ph b">used</strong>:</p>
+    <ul class="- topic/ul ul">
+      <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-4698A06C-F517-49D6-A86A-7EBCD2EF18CE" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-4698A06C-F517-49D6-A86A-7EBCD2EF18CE">systemModeConfig<ul class="- topic/ul ul">
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-E3472CF5-0A4A-44FD-8F48-9197A4F6C465" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-E3472CF5-0A4A-44FD-8F48-9197A4F6C465">VCO_TUNE: if set, the firmware configures the 1<sup class="+ topic/ph hi-d/sup ph sup">st</sup> service/channel
+            configuration with VCO tuning SSM.</li>
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-A1949BB0-2E2D-400C-823D-AE5F5B0C67C1" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-A1949BB0-2E2D-400C-823D-AE5F5B0C67C1">IDLEModeSelector: if set, the system remains in IDLEMode(XTO) during the sleep period.
+            If cleared, the system remains in IDLEMode(RC) during the sleep period.</li>
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-5BFF9393-0EF6-436A-89D5-98D45F905752" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-5BFF9393-0EF6-436A-89D5-98D45F905752">TMDEN Transparent Data Mode Enable: If set, the system is configured for
+            PollingMode(transparent).</li>
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-3A150A23-3866-4652-8D53-DB6DC6C55026" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-3A150A23-3866-4652-8D53-DB6DC6C55026">OPM Operation Mode (set to 0b11).</li>
+        </ul></li>
+      <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-613B49AC-7A1F-4F51-B8B1-2D41ABDD6672" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-613B49AC-7A1F-4F51-B8B1-2D41ABDD6672">serviceChannelConfig<ul class="- topic/ul ul">
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-B719CCC4-392A-492E-92C9-835928FA7E24" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-B719CCC4-392A-492E-92C9-835928FA7E24">startPollingIndex[3:0] is used as array index to start PollingMode</li>
+        </ul></li>
+    </ul>
+    <p class="- topic/p p">The following parameters are <strong class="+ topic/ph hi-d/b ph b">ignored</strong>:</p>
+    <ul class="- topic/ul ul">
+      <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-9B7E1F50-C100-4E71-8133-02A032A9EC0B" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-9B7E1F50-C100-4E71-8133-02A032A9EC0B">systemModeConfig<ul class="- topic/ul ul">
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-6845C9AA-486E-4DD3-B3BF-F5C497C083D0" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-6845C9AA-486E-4DD3-B3BF-F5C497C083D0">RF_CAL: RF calibration is not available in PollingMode</li>
+          <li class="- topic/li li" id="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-0B5DAAED-9FDE-41D4-B208-C60C41F3ADFC" data-ofbid="GUID-30F2E9FB-50F7-4EA1-B021-219CBD066F2A__GUID-0B5DAAED-9FDE-41D4-B208-C60C41F3ADFC">ANT_TUNE: not part of PollingMode</li>
+        </ul></li>
+    </ul>
+  </div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

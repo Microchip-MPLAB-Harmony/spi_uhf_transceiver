@@ -4,6 +4,6 @@ def loadModule():
 
     if "SAMC21" in processor:
         print("Load Module: Harmony SPI UHF transceiver")
-        ata5831 = Module.CreateComponent("spi_ata5831", "ATA5831", "SPI UHF transceiver", "ata5831/config/spi_ata5831.py")
-        ata5831.addDependency("spi_ata5831_SPI_dependency", "SPI", False, True)
-        ata5831.setDisplayType("SPI command set")
+        ata8510 = Module.CreateComponent("spi_ata8510", "ATA8510", "SPI UHF transceiver", "ata8510/config/spi_ata8510.py")
+        ata8510.addDependency("spi_ata8510_SPI_dependency", "SPI", False, True)
+        ata8510.setDisplayType("SPI command set")
