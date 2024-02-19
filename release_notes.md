@@ -3,6 +3,11 @@
 
 # Microchip MPLAB® Harmony 3 Release Notes
 
+## SPI UHF transceiver v1.0.1
+### Bug Fix
+
+- Fix of dependency version string in package.yml
+
 ## SPI UHF transceiver v1.0.0
 ### New Features
 
